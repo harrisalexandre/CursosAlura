@@ -12,8 +12,7 @@ public class AtividadeTesteIR {
 		// ifs aqui
 		
 		if(salario >= 1900.0 && salario <= 2800.0 ) {
-			System.out.println( "o IR é de 7.5% e"
-					+ " pode deduzir na declaração"
+			System.out.println( "o IR é de 7.5% e pode deduzir na declaração"
 					+ " o valor de R$ 142");
 			
 		} else if ( salario >= 2800.1 && salario <= 3751.0 ) {
