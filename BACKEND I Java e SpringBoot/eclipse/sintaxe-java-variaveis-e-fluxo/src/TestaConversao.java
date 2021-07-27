@@ -10,9 +10,6 @@ public class TestaConversao {
 		int valor = (int) salario;
 		System.out.println(valor);
 		
-		long numeroGrande = 951951931951951926L;
-		short valorPequeno = 1515;
-		byte b = 127;
 		
 		double valor1 = 0.1;
 		double valor2 = 0.2;

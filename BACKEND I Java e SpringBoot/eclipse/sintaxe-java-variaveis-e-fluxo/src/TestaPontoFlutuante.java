@@ -3,7 +3,7 @@ public class TestaPontoFlutuante {
 
 	public static void main(String[] args) {
 		double salario = 1250.70;
-		System.out.println("mes salario é " + salario);
+		System.out.println("mes salario ï¿½ " + salario);
 		
 		double idade = 37;
 		
