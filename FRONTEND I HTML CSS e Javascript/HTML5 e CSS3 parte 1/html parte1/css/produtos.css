@@ -42,9 +42,15 @@ nav a {
     margin: 0 1.5%;
     padding: 30px 20px;
     box-sizing: border-box;
-    border-color: #CCCCCC;
-    border-width: ;
-    border-style: ;
+    border: 2px solid #000000;
+    border-radius: 10px ;
+}
+
+.produtos li:hover {
+    border-color: #c78c19;
+}
+.produtos li:active {
+    border-color: #088c19;
 }
 
 .produtos h2 {
