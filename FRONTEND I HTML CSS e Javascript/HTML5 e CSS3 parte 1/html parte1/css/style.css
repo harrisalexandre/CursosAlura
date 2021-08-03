@@ -52,12 +52,13 @@ nav a:hover {
     padding: 30px 20px;
     box-sizing: border-box;
     border: 2px solid #000000;
-    border-radius: 10px ;
+    border-radius: 10px;
 }
 
 .produtos li:hover {
     border-color: #c78c19;
 }
+
 .produtos li:active {
     border-color: #088c19;
 }
@@ -93,16 +94,14 @@ footer {
     margin: 20px 0 0;
 }
 
-main {
-    width:  940px;
-    margin: 0 auto;
-}
+main {}
 
 form {
-    margin:40px 0;
+    margin: 40px 0;
 }
 
-form label, form p {
+form label,
+form p {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
@@ -121,22 +120,22 @@ form label, form p {
 
 .enviar {
     width: 40%;
-    padding: 15px 0 ;
+    padding: 15px 0;
     background: orange;
     color: white;
     font-weight: bold;
     font-size: 18px;
     border: none;
-    border-radius: 8px; 
+    border-radius: 8px;
     transition: 0.7s all;
     cursor: pointer;
-
 }
+
 .enviar:hover {
     background: darkorange;
-    transform: scale(1.1) ;
-}   
- 
+    transform: scale(1.1);
+}
+
 table {
     margin: 20px 0 40px;
 }
@@ -147,21 +146,31 @@ thead {
     font-weight: bold;
 }
 
-td, th {
+td,
+th {
     border: 1px solid #000000;
     padding: 8px 15px;
 }
 
+
 /* css da pagina inicial */
+
 .banner {
     width: 100%;
 }
 
 .titulo-principal {
     text-align: center;
-    font-size: 2em ;
+    font-size: 2em;
     margin: 0 0 1em;
     clear: left;
+}
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .principal p {
@@ -182,7 +191,67 @@ td, th {
     margin: 0 20px 20px 0;
 }
 
-.imagembeneficios {
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.itens:before {
+    content: "★";
+}
+
+.imagem-beneficios {
     width: 60%;
 }
 
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
