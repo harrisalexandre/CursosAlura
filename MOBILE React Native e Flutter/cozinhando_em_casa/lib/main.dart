@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './telas/home/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,33 +23,6 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.deepOrange,
         ),
-        home: Scaffold(
-          body: SizedBox(
-              height: 300,
-              child: Card(
-                margin: EdgeInsets.all(16),
-                child: Column(
-                  children: [
-                    Stack(
-                      children: [
-                        Image.network(
-                          'https://conteudo.imguol.com.br/c/entretenimento/9f/2020/06/15/bolo-de-fuba-1592241605327_v2_450x337.jpg',
-                          fit: BoxFit.fill,
-                          height: 268,
-                        ),
-                        Positioned(
-                            bottom: 10,
-                            left: 12,
-                            child: Text(
-                              'Bolo de laranja',
-                              style: TextStyle(fontSize: 20),
-                            ))
-                      ],
-                    )
-                  ],
-                ),
-              )),
-          appBar: AppBar(title: Text('Cozinhando em Casa')),
-        ));
+        home: Home());
   }
 }
