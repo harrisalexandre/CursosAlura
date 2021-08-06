@@ -1,57 +1,54 @@
 import 'package:flutter/material.dart';
+import 'dart:convert';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return _constuirHome();
+    return _construirHome();
   }
 
-  Widget _constuirHome {
+  Widget _construirHome() {
     return Scaffold(
-      body: _constuirCard(),
-      appBar: _constuirAppBar(),
-      
+        body: SizedBox(
+            height: 270,
+            child: _construirCard()
+        ),
+        appBar: _construirAppBar('Cozinhando em Casa')
     );
   }
 
-  Widget _constuirCard() {
-      return SizedBox(
-              height: 300,
-              child: Card(
-                margin: EdgeInsets.all(16),
-                child: Column(
-                  children: [
-                    Stack(
-                      children: [
-                        _constuirImagemCard(),
-                        _constuirTextoCard()
-                        ],
-                    )
-                  ],
-                ),
-              ));
+  Widget _construirCard() {
+    return Card(
+        margin: EdgeInsets.all(16),
+        child: Column(
+          children: <Widget>[
+            Stack(
+              children: <Widget>[
+                _construirImagemCard('https://receitas.carolecrema.com.br/wp-content/uploads/2018/10/shutterstock_662262010-848x477.jpg'),
+                _construirTituloCard('Bolo de Milho')
+              ],
+            ),
+          ],
+        )
+    );
   }
 
-  Widget _constuirTextoCard() {
-     return Positioned(
-                            bottom: 10,
-                            left: 12,
-                            child: Text(
-                              'Bolo de laranja',
-                              style: TextStyle(fontSize: 20),
-                            ));
+  Widget _construirImagemCard(String imagem) {
+    return Image.network(imagem,
+        fit: BoxFit.fill,
+        height: 238);
   }
 
-  Widget _constuirImagemCard() {
-       return Image.network(
-                          'https://conteudo.imguol.com.br/c/entretenimento/9f/2020/06/15/bolo-de-fuba-1592241605327_v2_450x337.jpg',
-                          fit: BoxFit.fill,
-                          height: 268,
-                        );
+  Widget _construirTituloCard(String titulo) {
+    return Positioned(
+        bottom: 10.0,
+        left: 10.0,
+        child: Text(titulo, style: TextStyle(fontSize: 20))
+    );
   }
 
-  Widget _constuirAppBar() {
-    return AppBar(title: Text('Cozinhando em Casa'));
+  Widget _construirAppBar(String titulo) {
+    return AppBar(title: Text(titulo));
   }
 
 }
