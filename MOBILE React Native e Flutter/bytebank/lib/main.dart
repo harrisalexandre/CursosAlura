@@ -82,7 +82,9 @@ class ListaTransferencias extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, Route())
+        },
         child: Icon(Icons.add),
       ),
     );
