@@ -3,6 +3,8 @@ public class Conta {
 	int agencia;
 	int numero;
 	String titular;
+	String cpf;
+	String profissao;
 	
 	public void deposita ( double valor ) {
 		this.saldo += valor;
@@ -10,13 +12,13 @@ public class Conta {
 	
 	public boolean saca(double valor) {
 		if(this.saldo >= valor) {
-			this.saldo -= this.saldo - valor;
+			this.saca(valor);
 			return true;
-		} else {
+		} 
 			return false;
 		}
 		
-	}
+	
 	
 	public boolean transfere(double valor, Conta destino) {
 		if(this.saldo >= valor) {
