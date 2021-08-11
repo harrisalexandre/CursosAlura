@@ -5,7 +5,7 @@ public class TestaSacaNegativo {
 		conta.deposita(100);
 		System.out.println(conta.saca(200));
 		
-		System.out.println(conta.pegaSaldo());
+		System.out.println(conta.getSaldo());
 		
 		// nao pode, deixei pra testar 
 		// resulta = The field Conta.saldo is not visible
