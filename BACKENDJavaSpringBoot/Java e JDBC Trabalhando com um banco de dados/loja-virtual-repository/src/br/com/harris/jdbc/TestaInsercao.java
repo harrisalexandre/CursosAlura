@@ -1,20 +1,22 @@
-
+package br.com.harris.jdbc;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import br.com.harris.jdbc.factory.ConnectionFactory;
+
 public class TestaInsercao {
 
 	public static void main(String[] args) throws SQLException {
-		
-		ConnectionFactory factory = new ConnectionFactory();
-		Connection connection = factory.recuperaConexao();
 
-		PreparedStatement stm = connection.prepareStatement("INSERT INTO PRODUTO (nome, descricao) VALUES ('Mouse', 'Mouse Sem Fio')", Statement.RETURN_GENERATED_KEYS);
-		stm.execute();
-		
+		ConnectionFactory factory = new ConnectionFactory();
+		Connection connection = factory.recuperarConexao();
+
+		Statement stm = connection.createStatement();
+		stm.execute("INSERT INTO PRODUTO (nome, descricao) VALUES ('Mouse', 'Mouse sem fio')"
+				, Statement.RETURN_GENERATED_KEYS);
+
 		ResultSet rst = stm.getGeneratedKeys();
 		while(rst.next()) {
 			Integer id = rst.getInt(1);
