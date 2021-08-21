@@ -11,7 +11,7 @@ public class TestaInsercaoEListagemComProduto {
 
 	public static void main(String[] args) throws SQLException {
 
-		Produto comoda = new Produto("Comoda", "Comoda Vertical");
+		Produto comoda = new Produto("cama", "box");
 
 		try(Connection connection = new ConnectionFactory().recuperarConexao()) {
 			ProdutoDAO produtoDao = new ProdutoDAO(connection);

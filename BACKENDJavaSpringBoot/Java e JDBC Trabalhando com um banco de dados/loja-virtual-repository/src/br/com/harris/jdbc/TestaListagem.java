@@ -9,7 +9,7 @@ import br.com.harris.jdbc.factory.ConnectionFactory;
 public class TestaListagem {
 
 	public static void main(String[] args) throws SQLException {
-
+  
 		ConnectionFactory connectionFactory = new ConnectionFactory();
 		Connection connection = connectionFactory.recuperarConexao();
 
