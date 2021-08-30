@@ -1,5 +1,8 @@
 package br.com.alura;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestaCursoComAluno {
 	public static void main(String[] args) {
 		Curso javaColecoes = new Curso("Dominando as colecoes do Java", "paulo silveira");
@@ -16,12 +19,15 @@ public class TestaCursoComAluno {
 		javaColecoes.matricula(a2);
 		javaColecoes.matricula(a3);
 
-		System.out.println("Todos os alunos matriculados: ");
-		javaColecoes.getAlunos().forEach(a -> {
-			System.out.println(a);
-		});
 
 		System.out.println(javaColecoes.estaMatriculado(a1));
+		
+		Set<Aluno> alunos = javaColecoes.getAlunos();
+		Iterator<Aluno> iterador = alunos.iterator();
+
+		while (iterador.hasNext()) {
+		    System.out.println(iterador.next());
+		}
 
 		Aluno turini = new Aluno("Rodrigo Turini", 34672);
 		String nome = "Rodrigo Turini";
